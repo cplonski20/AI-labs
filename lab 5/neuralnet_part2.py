@@ -43,10 +43,10 @@ class NeuralNet(nn.Module):
         self.lrate = lrate
         # self.model = nn.Sequential(torch.nn.Linear(in_size, 110), torch.nn.ReLU(), torch.nn.Linear(110, out_size))
         self.model = nn.Sequential(
-          nn.Conv2d(3,6,4),
+          nn.Conv2d(3,32,4),
           nn.ReLU(),
           nn.MaxPool2d(2,2),
-          nn.Conv2d(6,16,5),
+          nn.Conv2d(32,16,5),
           nn.ReLU(),
           nn.MaxPool2d(2,2),
           nn.Flatten(1),
